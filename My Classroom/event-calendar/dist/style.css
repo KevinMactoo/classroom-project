@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  background-color: #e7e7e7;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+.container {
+  padding: 60px;
+  /* text-align: center; */
+}
+
+.calendar-widget {
+  /* border: 1px solid #ccc; */
+  /* background-color: white; */
+  width: 450px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform .4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.calendar-title {
+  padding: 15px;
+  padding-top: 20px;
+  font-size: 24px;
+  line-height: 16px;
+  /* background-color: black; */
+  /* color: white; */
+}
+
+.calendar-content {
+  padding: 15px;
+  padding-top: 7px;
+}
+
+.widget-active {
+  transform: translate(-50%, -50%) scale(0.25);
+}
+
+.calendar-dates {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  float: left;
+  z-index: 5000;
+  position: relative;
+  background-color: white;
+  /* background-color: #444; */
+  /* color: white; */
+}
+
+.calendar-events {
+  width: 150px;
+  height: 300px;
+  display: inline-block;
+  float: left;
+  background-color: white;
+  transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: 2000;
+  left: -150px;
+  position: relative;
+  /* padding: 15px; */
+}
+
+/*.calendar-widget{
+  width: 300px;
+}*/
+.open-events {
+  float: right;
+  cursor: pointer;
+}
+
+.opened-event.calendar-widget {
+  width: 450px;
+}
+
+.opened-event .calendar-events {
+  left: 0px;
+}
+
+.calendar-events-title {
+  padding: 15px;
+}
+
+.calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+  padding: 9px 3px;
+  text-align: center;
+  position: relative;
+}
+
+.calendar th {
+  color: #c4c4c4;
+}
+
+.another-month {
+  color: #c4c4c4;
+}
+
+.calendar td:hover:not(.another-month) {
+  font-weight: bold;
+}
+
+.today {
+  background-color: #303030;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.notification {
+  width: 5px;
+  height: 4px;
+  position: absolute;
+  /* top: 7px; */
+  right: 16px;
+  background-color: #444;
+  bottom: 6px;
+}
+
+.n2 {
+  width: 8px;
+}

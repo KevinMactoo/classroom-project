@@ -1,0 +1,23 @@
+.wrapper
+  table
+    caption Timetable
+    tr
+      th Time
+      th Monday
+      th Tuesday
+      th Wednesday
+      th Thursday
+      th Friday
+      th Saturday
+      th Sunday
+    each val in [9, 10, 11, 12, 13, 14, 15, 16, 17]
+      tr
+        td #{val}:00 
+        td(contenteditable='')
+        td(contenteditable='')
+        td(contenteditable='')
+        td(contenteditable='')
+        td(contenteditable='')
+        td(contenteditable='')
+        td(contenteditable='')
+    
